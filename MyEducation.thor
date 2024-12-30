@@ -37,8 +37,9 @@ class MyEducation < Thor
 
   desc "sThreeArchive", "uses environment variable and AWS SSO to copy archive files to S3"
   def sThreeSync
+    archivePath = "~/Documents/my_education/archives"
     target = ENV::fetch("S3_ARCHIVE")
-    # system "aws s3 cp . s3://#{target}/ --recursive  --exclude \"*\" --include \"*.tar\""
+    # system "aws s3 cp #{archivePath} s3://#{target}/ --recursive  --exclude \"*\" --include \"*.tar\""
     # system "aws s3 ls s3://#{target}"
     # todo: leverage Ruby AWS SDK to only copy the diff between local archive and S3 bucket.
   end
