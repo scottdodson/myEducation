@@ -26,6 +26,10 @@ Installation
     gem install thor
     clone repository
 
+sThreeSync command functionality is commented out. To enable you need to have an AWS S3 target
+bucket, AWS CLI 2 installed, an environment variable set with your bucket id, and be authenticated.
+AWS documentation covers a variety of ways to perform the AWS configuration.
+
 Usage and documentation
 -----------------------
 This script was developed and used on linux.
@@ -46,6 +50,9 @@ Create an archive file in the archives subfolder
 
     thor my_education:archive
 
+Sync archive directory with an AWS S3 bucket
+
+    thor my_education:sThreeSync
 
 License
 -------
